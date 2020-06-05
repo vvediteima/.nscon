@@ -5,4 +5,8 @@ alias ns='php ~/.nscon/main.php'
 echo "Удаление установщика..."
 sleep 1;
 rm -rf ~/in
-echo "Готово!\n"
+echo "Готово!"
+sleep 1;
+echo "Откройте терминал заново";
+sleep 1;
+pkill terminal'
