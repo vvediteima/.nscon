@@ -1,8 +1,8 @@
-echo "Installing..\n";
-sleep 1;
+echo "Установка...";
+sleep 3;
 echo "alias ns='php ~/.nscon/main.php'" >> ~/.bash_aliases; 
-echo "Done...\n";
+alias ns='php ~/.nscon/main.php'
+echo "Удаление установщика..."
 sleep 1;
-echo "Restarting..."
-sleep 1;
-pkill terminal;
+rm -rf ~/in
+echo "Готово!\n"
