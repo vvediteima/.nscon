@@ -9,4 +9,4 @@ echo "Готово!"
 sleep 1;
 echo "Откройте терминал заново";
 sleep 1;
-pkill terminal'
+pkill terminal
