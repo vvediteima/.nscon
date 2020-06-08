@@ -1,4 +1,9 @@
 <?php
+if(@fsockopen("heroku.com",80));
+else
+{
+        die ("Namius: No internet connection\n");
+}
 $req="?";
 $i=1;
 while (1) {
