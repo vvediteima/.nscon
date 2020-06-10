@@ -6,6 +6,9 @@ else
 }
 $req="?";
 $i=1;
+if (isset($argv[1])==0) {
+die ("Namius:You have not entered a command\n");
+}
 while (1) {
 $req=$req.$i."=".$argv[$i]."&";
 if (isset($argv[$i+1])==0) {
