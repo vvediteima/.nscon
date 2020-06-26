@@ -1,1 +1,1 @@
-Namius version: 7.0.1
+Namius version: 7.0.2
