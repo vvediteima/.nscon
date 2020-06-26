@@ -27,7 +27,13 @@ $ex[4]='';
 $ex[5]='';
 $ex[6]='';
 $sys=implode("",$ex);
-system("$sys");
+$f=system("$sys");
+if ($sys='cat ~/.nscon/ver.txt') {
+$actv=file_get_contents("https://raw.githubusercontent.com/vvediteima/.nscon/master/ver.txt");
+if ("$f\n"!="$actv") {
+echo "The currient $actv";
+}
+}
 }
 if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4]=='echo:') {
 $ex[0]='';
