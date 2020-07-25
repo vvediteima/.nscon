@@ -1,1 +1,1 @@
-Namius version: 8.0.0 Pub
+Namius version: 8.0 Pub
