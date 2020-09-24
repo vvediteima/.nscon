@@ -1,5 +1,5 @@
 <?php
-if(@fsockopen("http://18.197.153.133",80));
+if(@fsockopen("http://52.59.196.178",80));
 else
 {
         die ("Namius: No internet connection\n");
